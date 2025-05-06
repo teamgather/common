@@ -9,5 +9,5 @@
 export const ColorStyle: {
   Primary: string;
 } = {
-  Primary: '#A90100',
+  Primary: '#000000',
 };
