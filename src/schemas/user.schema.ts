@@ -16,6 +16,29 @@ import { HydratedDocument } from 'mongoose';
 })
 export class User {
   @Prop({
+    type: String,
+    required: true,
+    trim: true,
+    maxlength: 100,
+  })
+  name: string;
+
+  @Prop({
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+    maxlength: 300,
+  })
+  email: string;
+
+  @Prop({
+    type: String,
+    required: true,
+  })
+  password: string;
+
+  @Prop({
     type: Date,
   })
   createdAt: Date;
