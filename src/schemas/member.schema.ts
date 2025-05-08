@@ -33,25 +33,11 @@ export class Member {
   project: Project;
 
   @Prop({
-    type: String,
-    required: true,
-    trim: true,
-  })
-  projectName: string;
-
-  @Prop({
     type: MongooseSchema.Types.ObjectId,
     ref: 'User',
     required: true,
   })
   user: User;
-
-  @Prop({
-    type: String,
-    required: true,
-    trim: true,
-  })
-  userName: string;
 
   @Prop({
     type: String,
