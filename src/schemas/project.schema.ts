@@ -25,6 +25,13 @@ export class Project {
   name: string;
 
   @Prop({
+    type: String,
+    trim: true,
+    maxlength: 500,
+  })
+  description?: string | null;
+
+  @Prop({
     type: [MemberSchema],
     required: true,
   })
