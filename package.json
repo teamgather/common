@@ -1,6 +1,6 @@
 {
   "name": "@teamgather/common",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Gather.team - Common",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

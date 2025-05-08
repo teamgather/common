@@ -3,19 +3,19 @@ import { HydratedDocument } from 'mongoose';
 import { Member, MemberSchema } from './member.schema';
 
 /**
- * ANCHOR User
- * @date 07/05/2025 - 00:00:30
+ * ANCHOR Project
+ * @date 08/05/2025 - 09:55:44
  *
  * @export
- * @class User
- * @typedef {User}
+ * @class Project
+ * @typedef {Project}
  */
 @Schema({
   autoCreate: true,
   autoIndex: true,
   timestamps: true,
 })
-export class User {
+export class Project {
   @Prop({
     type: String,
     required: true,
@@ -23,21 +23,6 @@ export class User {
     maxlength: 100,
   })
   name: string;
-
-  @Prop({
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    maxlength: 300,
-  })
-  email: string;
-
-  @Prop({
-    type: String,
-    required: true,
-  })
-  password: string;
 
   @Prop({
     type: [MemberSchema],
@@ -57,18 +42,18 @@ export class User {
 }
 
 /**
- * ANCHOR User Document
- * @date 07/05/2025 - 00:00:57
+ * ANCHOR Project Document
+ * @date 08/05/2025 - 09:55:58
  *
  * @export
- * @typedef {UserDocument}
+ * @typedef {ProjectDocument}
  */
-export type UserDocument = HydratedDocument<User>;
+export type ProjectDocument = HydratedDocument<Project>;
 
 /**
- * ANCHOR User Schema
- * @date 07/05/2025 - 00:01:03
+ * ANCHOR Project Schema
+ * @date 08/05/2025 - 09:56:05
  *
  * @type {*}
  */
-export const UserSchema = SchemaFactory.createForClass(User);
+export const ProjectSchema = SchemaFactory.createForClass(Project);
