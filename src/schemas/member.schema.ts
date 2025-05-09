@@ -1,8 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
+import { HydratedDocument } from 'mongoose';
 import { MemberRoleEnum } from '../enums/member.enum';
-import { User } from './user.schema';
-import { Project } from './project.schema';
 
 /**
  * ANCHOR Member
@@ -26,11 +24,10 @@ export class Member {
   id: string;
 
   @Prop({
-    type: MongooseSchema.Types.ObjectId,
-    ref: 'Project',
+    type: String,
     required: true,
   })
-  project: Project;
+  projectId: string;
 
   @Prop({
     type: String,
@@ -40,11 +37,10 @@ export class Member {
   projectName: string;
 
   @Prop({
-    type: MongooseSchema.Types.ObjectId,
-    ref: 'User',
+    type: String,
     required: true,
   })
-  user: User;
+  userId: string;
 
   @Prop({
     type: String,
