@@ -64,3 +64,7 @@ export type ProjectDocument = HydratedDocument<Project>;
  * @type {*}
  */
 export const ProjectSchema = SchemaFactory.createForClass(Project);
+
+ProjectSchema.index({
+  name: 1,
+});
