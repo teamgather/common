@@ -32,13 +32,6 @@ export class Member {
   @Prop({
     type: String,
     required: true,
-    trim: true,
-  })
-  projectName: string;
-
-  @Prop({
-    type: String,
-    required: true,
   })
   userId: string;
 

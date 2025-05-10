@@ -72,3 +72,7 @@ export type UserDocument = HydratedDocument<User>;
  * @type {*}
  */
 export const UserSchema = SchemaFactory.createForClass(User);
+
+UserSchema.index({
+  name: 1,
+});
