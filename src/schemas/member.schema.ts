@@ -51,6 +51,13 @@ export class Member {
 
   @Prop({
     type: String,
+    required: true,
+    trim: true,
+  })
+  userEmail: string;
+
+  @Prop({
+    type: String,
     enum: Object.values(MemberRoleEnum),
     required: true,
   })

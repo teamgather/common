@@ -12,6 +12,8 @@ export interface MemberModel {
   id: string;
   projectId: string;
   userId: string;
+  userName: string;
+  userEmail: string;
   role: MemberRoleEnum;
   createdAt: string;
 }
