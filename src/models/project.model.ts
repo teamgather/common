@@ -13,4 +13,5 @@ export interface ProjectModel {
   name: string;
   description?: string | null;
   members: MemberModel[];
+  createdAt: string;
 }
